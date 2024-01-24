@@ -1,27 +1,15 @@
 #include <iostream>
 int main()
 {
-    int day;
-    std::cout << "Enter the number, 0 to 4";
-    std::cin >> day;
+    int num1, num2;
+    int more_larger;
 
-    switch (day)
-    {
-    case 1: 
-        std::cout << "GOOD DAY";
-        break; // break가 없으면 case 2가 실행이 되버린다.
-    case 2: 
-        std::cout << "GOOD DAY2";
-    case 3: 
-        std::cout << "GOOD DAY3\n";
-        break;
-    case 4: 
-        std::cout << "GOOD DAY4";
-        break;
-    
-    default: // except같은 느낌으로 다른 것을 입력하면 이 결과가 출력.
-        std::cout << "NULL DAY";
-        break;
-    }
+    std::cout << "number 1: ";
+    std::cin >> num1;
+    std::cout << "number 2: ";
+    std::cin >> num2;
+    more_larger = (num1 > num2) ? num1 : num2; // 조건이 true면 more_larger = num1  <-->조건이 false면 more_larger = num2
+    std::cout << more_larger << " is more larger" << std::endl;
+
     return 0;
 }
